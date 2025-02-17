@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lalit Nandkumar Joshi - Aspiring Software Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#60A5FA',
+            secondary: '#93C5FD'
+          },
+          borderRadius: {
+            'none': '0px',
+            'sm': '4px',
+            DEFAULT: '8px',
+            'md': '12px',
+            'lg': '16px',
+            'xl': '20px',
+            '2xl': '24px',
+            '3xl': '32px',
+            'full': '9999px',
+            'button': '8px'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <style>
+    :where([class^="ri-"])::before { content: "\f3c2"; }
+    body { font-family: 'Inter', sans-serif; }
+    .skill-bar { transition: width 1s ease-in-out; }
+    .modal { display: none; }
+    .modal.active { display: flex; }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-gray-800 shadow-md z-50">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="text-2xl font-bold text-primary">LJ</div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#home" class="hover:text-primary transition-colors">Home</a>
+          <a href="#about" class="hover:text-primary transition-colors">About</a>
+          <a href="#skills" class="hover:text-primary transition-colors">Skills</a>
+          <a href="#projects" class="hover:text-primary transition-colors">Projects</a>
+          <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+        </div>
+        <button class="md:hidden w-10 h-10 flex items-center justify-center" onclick="toggleMenu()">
+          <i class="ri-menu-line text-2xl"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu hidden fixed top-16 left-0 w-full bg-gray-800 shadow-lg z-40 md:hidden">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex flex-col space-y-4">
+        <a href="#home" class="hover:text-primary transition-colors">Home</a>
+        <a href="#about" class="hover:text-primary transition-colors">About</a>
+        <a href="#skills" class="hover:text-primary transition-colors">Skills</a>
+        <a href="#projects" class="hover:text-primary transition-colors">Projects</a>
+        <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+      </div>
+    </div>
+  </div>
+
+<!-- Home Section -->
+<section id="home" class="pt-24 min-h-screen flex items-center relative overflow-hidden" style="background: linear-gradient(45deg, #000000, #1a1a1a);">
+  <div class="absolute inset-0">
+    <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(0,102,204,0.1),transparent_50%)]"></div>
+    <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-primary opacity-20 rounded-full filter blur-3xl animate-pulse"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary opacity-20 rounded-full filter blur-3xl animate-pulse" style="animation-delay: 1s"></div>
+  </div>
+  <div class="container mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="space-y-8">
+        <h1 class="text-5xl font-bold leading-tight text-white">
+          Lalit Nandkumar Joshi <span class="text-primary animate-pulse">Software Developer</span>
+        </h1>
+        <p class="text-lg text-gray-300">
+          Aspiring software developer with a strong foundation in Python, Django, and data analytics. Passionate about problem-solving, full-stack development, and machine learning. MCA (Pursuing) at Savitribai Phule Pune University.
+        </p>
+        <div class="flex space-x-4">
+          <button class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
+            View Projects
+          </button>
+          <button class="border-2 border-primary text-primary px-8 py-3 !rounded-button hover:bg-primary hover:text-white transition-colors whitespace-nowrap">
+            Contact Me
+          </button>
+        </div>
+      </div>
+      <div class="relative">
+        <img src="../New Portfolio/Images/Lalit PFP.png" class="rounded-2xl shadow-xl object-cover" alt="Lalit Nandkumar Joshi">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-16">Technical Skills</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Card 1: Programming & Frameworks -->
+        <div class="bg-gray-700 p-8 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-6">Programming &amp; Frameworks</h3>
+          <div class="space-y-4">
+            <div class="skill-item">
+              <div class="flex justify-between mb-2">
+                <span>Python</span>
+                <span>90%</span>
+              </div>
+              <div class="h-2 bg-gray-600 rounded-full">
+                <div class="h-full bg-primary rounded-full skill-bar" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between mb-2">
+                <span>Django</span>
+                <span>85%</span>
+              </div>
+              <div class="h-2 bg-gray-600 rounded-full">
+                <div class="h-full bg-primary rounded-full skill-bar" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between mb-2">
+                <span>HTML</span>
+                <span>90%</span>
+              </div>
+              <div class="h-2 bg-gray-600 rounded-full">
+                <div class="h-full bg-primary rounded-full skill-bar" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between mb-2">
+                <span>CSS</span>
+                <span>90%</span>
+              </div>
+              <div class="h-2 bg-gray-600 rounded-full">
+                <div class="h-full bg-primary rounded-full skill-bar" style="width: 90%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2: Database & Analytics -->
+        <div class="bg-gray-700 p-8 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-6">Database &amp; Analytics</h3>
+          <div class="space-y-4">
+            <div class="skill-item">
+              <div class="flex justify-between mb-2">
+                <span>SQL/MySQL</span>
+                <span>85%</span>
+              </div>
+              <div class="h-2 bg-gray-600 rounded-full">
+                <div class="h-full bg-primary rounded-full skill-bar" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between mb-2">
+                <span>Power BI</span>
+                <span>80%</span>
+              </div>
+              <div class="h-2 bg-gray-600 rounded-full">
+                <div class="h-full bg-primary rounded-full skill-bar" style="width: 80%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3: Tools & Version Control -->
+        <div class="bg-gray-700 p-8 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-6">Tools &amp; Version Control</h3>
+          <div class="space-y-4">
+            <div class="skill-item">
+              <div class="flex justify-between mb-2">
+                <span>Git/GitHub</span>
+                <span>90%</span>
+              </div>
+              <div class="h-2 bg-gray-600 rounded-full">
+                <div class="h-full bg-primary rounded-full skill-bar" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between mb-2">
+                <span>Jupyter Notebook</span>
+                <span>80%</span>
+              </div>
+              <div class="h-2 bg-gray-600 rounded-full">
+                <div class="h-full bg-primary rounded-full skill-bar" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between mb-2">
+                <span>VS Code</span>
+                <span>85%</span>
+              </div>
+              <div class="h-2 bg-gray-600 rounded-full">
+                <div class="h-full bg-primary rounded-full skill-bar" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between mb-2">
+                <span>Windows</span>
+                <span>80%</span>
+              </div>
+              <div class="h-2 bg-gray-600 rounded-full">
+                <div class="h-full bg-primary rounded-full skill-bar" style="width: 80%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-gray-800">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-16">Projects</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Project 1: Movie Ticketing System -->
+        <div class="project-card bg-gray-700 rounded-lg shadow-md overflow-hidden">
+          <img src="Images/Movie Ticketing System.png" class="w-full object-cover" alt="Movie Ticketing System" style="height: 350px;">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Movie Ticketing System</h3>
+            <p class="text-gray-300 mb-4">
+              Developed a dynamic Movie Ticketing System using Python, Django, HTML, CSS, and MySQL. Streamlined ticket booking with an intuitive interface and robust admin panel.
+            </p>
+            <ul class="list-disc list-inside text-gray-300 mb-4">
+              <li>Reduced manual booking time by 60%.</li>
+              <li>Enhanced customer experience with a user-friendly interface.</li>
+              <li>Optimized backend processes for efficient ticket management.</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-blue-900 text-blue-200 rounded-full text-sm">Python</span>
+              <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Django</span>
+              <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">HTML</span>
+              <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">CSS</span>
+              <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">MySQL</span>
+            </div>
+            <button class="px-4 py-2 bg-primary bg-opacity-20 text-primary hover:bg-opacity-30 rounded-lg transition-all duration-300" onclick="showProjectDetails(1)">View Project →</button>
+          </div>
+        </div>
+        <!-- Project 2: IPL Cricket Analysis -->
+        <div class="project-card bg-gray-700 rounded-lg shadow-md overflow-hidden">
+          <img src="Images/IPL Data Analysis.jpg" class="w-full object-cover" alt="IPL Cricket Analysis" style="height: 350px;">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">IPL Cricket Analysis</h3>
+            <p class="text-gray-300 mb-4">
+              Designed an interactive Power BI dashboard to analyze IPL cricket data, uncovering insights on team and player performance.
+            </p>
+            <ul class="list-disc list-inside text-gray-300 mb-4">
+              <li>Extracted insights on top-performing teams and players.</li>
+              <li>Implemented advanced visualizations for data-driven decision making.</li>
+              <li>Improved match outcome predictions by 40%.</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-blue-900 text-blue-200 rounded-full text-sm">Power BI</span>
+              <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">SQL</span>
+              <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Python</span>
+            </div>
+            <button class="px-4 py-2 bg-primary bg-opacity-20 text-primary hover:bg-opacity-30 rounded-lg transition-all duration-300" onclick="showProjectDetails(2)">View Project →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section with Visualization (Moved Below Projects) -->
+  <section id="about" class="py-20 bg-gray-800">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-16">About Me</h2>
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Professional Summary with Visualization -->
+        <div class="text-gray-300">
+          <h3 class="text-2xl font-semibold mb-4">Professional Summary</h3>
+          <p class="mb-6">
+            Aspiring software developer with a strong foundation in Python, Django, and data analytics. I am passionate about problem-solving, full-stack development, and machine learning. With hands-on experience in MySQL, Power BI, and version control using Git/GitHub, I am eager to apply and enhance my skills in a dynamic tech environment.
+          </p>
+          <!-- Visualization Image (Replace with an actual infographic if available) -->
+          <img src="Images/Coding Visualization.jpg" alt="Coding Visualization" class="w-full rounded-lg shadow-md">
+        </div>
+        <!-- Education & Training Timeline -->
+        <div class="text-gray-300">
+          <h3 class="text-2xl font-semibold mb-4">Education &amp; Training Timeline</h3>
+          <div class="relative border-l-2 border-gray-600 ml-4">
+            <div class="mb-8 ml-4">
+              <div class="absolute w-4 h-4 bg-primary rounded-full -left-2 top-1"></div>
+              <h4 class="font-semibold text-lg">MCA (Pursuing)</h4>
+              <time class="block text-sm text-gray-400">Savitribai Phule Pune University, Expected 2025</time>
+            </div>
+            <div class="mb-8 ml-4">
+              <div class="absolute w-4 h-4 bg-primary rounded-full -left-2 top-1"></div>
+              <h4 class="font-semibold text-lg">Training - Codenera</h4>
+              <time class="block text-sm text-gray-400">Trainee, 2024</time>
+              <p class="text-sm mt-2">Intensive training on Python, NumPy, Pandas, MySQL, HTML, CSS, Django, Power BI, and Machine Learning. (3-4 months, Daily 8 hours)</p>
+            </div>
+            <div class="mb-8 ml-4">
+              <div class="absolute w-4 h-4 bg-primary rounded-full -left-2 top-1"></div>
+              <h4 class="font-semibold text-lg">BSc (Chemistry)</h4>
+              <time class="block text-sm text-gray-400">Savitribai Phule Pune University, 2023</time>
+            </div>
+            <div class="mb-8 ml-4">
+              <div class="absolute w-4 h-4 bg-primary rounded-full -left-2 top-1"></div>
+              <h4 class="font-semibold text-lg">12th - Maharashtra State Board</h4>
+              <time class="block text-sm text-gray-400">75.64% (2019)</time>
+            </div>
+            <div class="mb-8 ml-4">
+              <div class="absolute w-4 h-4 bg-primary rounded-full -left-2 top-1"></div>
+              <h4 class="font-semibold text-lg">10th - Maharashtra State Board</h4>
+              <time class="block text-sm text-gray-400">55.85% (2017)</time>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-16">Get in Touch</h2>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="space-y-8">
+          <h3 class="text-2xl font-semibold">Let's Work Together</h3>
+          <p class="text-gray-600">
+            I'm available for freelance projects, full-time positions, and consulting opportunities. Feel free to reach out if you'd like to discuss potential collaboration.
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-center space-x-4">
+              <div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full">
+                <i class="ri-mail-line text-primary"></i>
+              </div>
+              <span>joshilalit745@gmail.com</span>
+            </div>
+            <div class="flex items-center space-x-4">
+              <div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full">
+                <i class="ri-phone-line text-primary"></i>
+              </div>
+              <span>+91 93257 58564</span>
+            </div>
+            <div class="flex items-center space-x-4">
+              <div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full">
+                <i class="ri-map-pin-line text-primary"></i>
+              </div>
+              <span>Pune, India</span>
+            </div>
+          </div>
+          <div class="flex space-x-4">
+            <a href="https://www.linkedin.com/in/lalit-joshi-978028261/" class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full hover:bg-primary hover:text-white transition-colors">
+              <i class="ri-linkedin-line"></i>
+            </a>
+            <a href="https://github.com/Lalit745" class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full hover:bg-primary hover:text-white transition-colors">
+              <i class="ri-github-line"></i>
+            </a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full hover:bg-primary hover:text-white transition-colors">
+              <i class="ri-twitter-line"></i>
+            </a>
+          </div>
+        </div>
+        <form id="contact-form" class="space-y-6">
+          <div>
+            <label class="block text-sm font-medium text-gray-300 mb-2">Name</label>
+            <input type="text" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-white" required>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+            <input type="email" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent " required>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+            <textarea class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent h-32 text-white" required></textarea>
+          </div>
+          <button type="submit" class="w-full bg-primary text-white px-6 py-3 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+<footer class="bg-gray-800 text-white py-12 border-t border-gray-700">
+  <div class="container mx-auto px-6">
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Bio Section -->
+      <div>
+        <h3 class="text-xl font-bold">Lalit Nandkumar Joshi</h3>
+        <p class="text-gray-400">
+          Aspiring Software Developer passionate about coding and data analytics.
+        </p>
+      </div>
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-lg font-semibold">Quick Links</h4>
+        <ul class="mt-4 space-y-2">
+          <li>
+            <a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a>
+          </li>
+          <li>
+            <a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a>
+          </li>
+          <li>
+            <a href="#skills" class="text-gray-400 hover:text-white transition-colors">Skills</a>
+          </li>
+          <li>
+            <a href="#projects" class="text-gray-400 hover:text-white transition-colors">Projects</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Connect Section -->
+      <div>
+        <h4 class="text-lg font-semibold">Connect</h4>
+        <ul class="mt-4 space-y-2">
+          <li>
+            <a href="https://www.linkedin.com/in/lalit-joshi-978028261/" class="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
+          </li>
+          <li>
+            <a href="https://github.com/Lalit745" class="text-gray-400 hover:text-white transition-colors">GitHub</a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">Twitter</a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">Email</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+      <p>&copy; 2025 Lalit Nandkumar Joshi. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+  <script>
+    const projectData = [
+      {
+        id: 1,
+        title: "Movie Ticketing System",
+        image: "https://via.placeholder.com/400x300?text=Movie+Ticketing+System",
+        description: "Developed a dynamic Movie Ticketing System using Python, Django, HTML, CSS, and MySQL. Streamlined ticket booking with an intuitive interface and robust admin panel.",
+        technologies: ["Python", "Django", "HTML", "CSS", "MySQL"],
+        demo: "#",
+        github: "#"
+      },
+      {
+        id: 2,
+        title: "IPL Cricket Analysis",
+        image: "https://via.placeholder.com/400x300?text=IPL+Cricket+Analysis",
+        description: "Designed an interactive Power BI dashboard to analyze IPL cricket data, uncovering insights on team and player performance.",
+        technologies: ["Power BI", "SQL", "Python (Pandas, NumPy)"],
+        demo: "#",
+        github: "#"
+      }
+    ];
+    function toggleMenu() {
+      document.querySelector('.mobile-menu').classList.toggle('hidden');
+    }
+    function showProjectDetails(id) {
+      const project = projectData.find(p => p.id === id);
+      window.location.href = project ? project.demo : '#';
+    }
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      console.log('Form submitted:', Object.fromEntries(formData));
+      const successMessage = document.createElement('div');
+      successMessage.className = 'fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg';
+      successMessage.textContent = 'Message sent successfully!';
+      document.body.appendChild(successMessage);
+      setTimeout(() => {
+        successMessage.remove();
+      }, 3000);
+      e.target.reset();
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+      const skillBars = document.querySelectorAll('.skill-bar');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.width = entry.target.style.width;
+          }
+        });
+      });
+      skillBars.forEach(bar => observer.observe(bar));
+    });
+  </script>
+</body>
+</html>
